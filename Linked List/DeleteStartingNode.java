@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class DeleteStartingNode {
 
-    Node head=null, tail = null;
+    Node head = null, tail = null;
 
     Random random = new Random();
 
@@ -52,12 +52,12 @@ public class DeleteStartingNode {
 
     }
 
-    public void insertTail(int data) {
-        Node new_node = new Node();
-        new_node.data = data;
-        tail.next = new_node;
-        tail = new_node;
-    }
+    // public void insertTail(int data) {
+    // Node new_node = new Node();
+    // new_node.data = data;
+    // tail.next = new_node;
+    // tail = new_node;
+    // }
 
     public static void main(String[] args) {
 
