@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class DeleteStartingNode {
 
-    Node head, tail = null;
+    Node head=null, tail = null;
 
     Random random = new Random();
 
@@ -48,7 +48,7 @@ public class DeleteStartingNode {
                 trav = trav.next;
             }
         }
-        System.out.println("Head: " + head.data+" Tail: " + tail.data );
+        System.out.println("Head: " + head.data + " Tail: " + tail.data);
 
     }
 
@@ -65,9 +65,9 @@ public class DeleteStartingNode {
 
         list.generateList(10);
         list.printList();
-        // list.deleteStartingNode();
-        // list.printList();
-        list.insertTail(1001);
+        list.deleteStartingNode();
         list.printList();
+        // list.insertTail(1001);
+        // list.printList();
     }
 }

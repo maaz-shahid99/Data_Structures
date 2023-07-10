@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class DeleteEndNode {
 
-    Node head;
+    Node head = null, tail = null;
 
     Random random = new Random();
 
@@ -33,9 +33,17 @@ public class DeleteEndNode {
 
         for (int i = 0; i < n; i++) {
             Node new_node = new Node();
-            new_node.data = random.nextInt(125);
-            new_node.next = head;
-            head = new_node;
+
+            if (head == null) {
+                head = new_node;
+                tail = new_node;
+                new_node.data = random.nextInt(100);
+            } else {
+                new_node.data = random.nextInt(100);
+                new_node.next = head;
+                head = new_node;
+            }
+
         }
     }
 
@@ -45,7 +53,7 @@ public class DeleteEndNode {
         trav = head;
 
         System.out.print("List: ");
-        
+
         while (trav != null) {
             if (trav.next != null)
                 System.out.print(trav.data + " -> ");
@@ -54,6 +62,7 @@ public class DeleteEndNode {
 
             trav = trav.next;
         }
+        System.out.println("Head: " + head.data + " Tail: " + tail.data);
     }
 
     public static void main(String[] args) {
