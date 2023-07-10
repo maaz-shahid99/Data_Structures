@@ -6,16 +6,6 @@ public class DeleteEndNode {
 
     Random random = new Random();
 
-    public void generateList(int n) {
-
-        for (int i = 0; i < n; i++) {
-            Node new_node = new Node();
-            new_node.data = random.nextInt(125);
-            new_node.next = head;
-            head = new_node;
-        }
-    }
-
     public void deleteEndNode() {
         Node current_node, prev_node;
 
@@ -39,12 +29,23 @@ public class DeleteEndNode {
 
     }
 
+    public void generateList(int n) {
+
+        for (int i = 0; i < n; i++) {
+            Node new_node = new Node();
+            new_node.data = random.nextInt(125);
+            new_node.next = head;
+            head = new_node;
+        }
+    }
+
     public void printList() {
 
         Node trav;
-
         trav = head;
+
         System.out.print("List: ");
+        
         while (trav != null) {
             if (trav.next != null)
                 System.out.print(trav.data + " -> ");

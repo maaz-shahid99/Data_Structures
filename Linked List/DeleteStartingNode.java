@@ -18,19 +18,25 @@ public class DeleteStartingNode {
 
     public void printList() {
 
-        Node trav;
-        trav = head;
+        Node trav = head;
 
         System.out.print("List: ");
 
-        while (trav != null) {
-            if (trav.next != null)
-                System.out.print(trav.data + " -> ");
-            else
-                System.out.println(trav.data);
+        if (trav.next == null)
+            System.out.print("List is Empty");
 
-            trav = trav.next;
+        else {
+
+            while (trav != null) {
+                if (trav.next != null)
+                    System.out.print(trav.data + " -> ");
+                else
+                    System.out.print(trav.data);
+
+                trav = trav.next;
+            }
         }
+
     }
 
     public static void main(String[] args) {
